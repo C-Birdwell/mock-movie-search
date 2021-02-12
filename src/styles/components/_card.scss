@@ -1,0 +1,101 @@
+@import '../utils/import';
+
+.card {
+  flex: 1;
+  display: flex;
+  @at-root #{&}__wrapper {
+    background-color: rgba(white, 0.75);
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    -webkit-box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.85);
+    padding-bottom: 10px;
+    max-width: 500px;
+  }
+  @at-root #{&}__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+  }
+  @at-root #{&}__date {
+    text-align: right;
+    max-width: 342px;
+    margin: 0 auto 20px auto;
+    width: 98%;
+    font-weight: 100;
+    font-size: 16px;
+  }
+
+  @at-root #{&}__poster {
+    position: relative;
+    max-width: 370px;
+    margin: 0 auto;
+    width: 98%;
+  }
+  @at-root #{&}__poster__img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    max-width: 342px;
+    @media screen and (max-width: 500px) {
+      width: 95%;
+    }
+  }
+
+  @at-root #{&}__rating {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    border: 2px solid $background;
+    display: flex;
+    justify-items: center;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.85);
+    &--high {
+      background-color: $high;
+    }
+    &--medium {
+      background-color: $medium;
+    }
+    &--low {
+      background-color: $low;
+    }
+    &--null {
+      background-color: $neutral;
+    }
+  }
+
+  @at-root #{&}__rating__score {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    background-color: $background;
+    margin: auto;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  @at-root #{&}__information__genres__key {
+    max-width: 342px;
+    margin: 0 auto 20px auto;
+    width: 98%;
+    font-size: 20px;
+  }
+  @at-root #{&}__information__genres {
+    max-width: 342px;
+    margin: 0 auto 10px auto;
+    width: 98%;
+    text-align: right;
+  }
+}

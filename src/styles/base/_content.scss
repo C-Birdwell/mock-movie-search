@@ -1,0 +1,24 @@
+body {
+  background-color: #0a2641;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.content {
+  grid-area: content;
+  padding: 0 2.5%;
+  margin-top: 170px;
+  display: flex;
+  flex: 1;
+  min-height: 75vh;
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}

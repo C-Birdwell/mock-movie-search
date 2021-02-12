@@ -1,0 +1,19 @@
+.screen {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  @at-root #{&}__dashboard {
+    grid-area: content;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  @at-root #{&}__info {
+    background-color: #fff;
+    min-height: 100%;
+    padding: 20px 2.5%;
+    border-radius: 15px;
+  }
+}

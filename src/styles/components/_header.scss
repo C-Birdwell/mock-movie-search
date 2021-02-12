@@ -1,0 +1,91 @@
+@import '../utils/import';
+
+.header {
+  grid-area: header;
+  height: 150px;
+  position: fixed;
+  padding: 0 2.5%;
+  width: 100%;
+  background-color: $background;
+  border: 2px solid transparent;
+  border-top: 0px;
+  border-radius: 0 0 15px 15px;
+  width: 94%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: background-color 0.75s, border-color 0.85s;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  &--scrolled {
+    z-index: 10;
+    background-color: rgba(darken($background, 5%), 0.85);
+    border-color: #fff;
+  }
+  .row {
+    margin: 0 0 0 0;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  @at-root #{&}__search_wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
+  }
+  @at-root #{&}__title {
+    color: #fff;
+    font-size: 4vh;
+    margin: 0 0 0 0;
+    flex: 1;
+  }
+  @at-root #{&}__title__link {
+    flex: 1;
+  }
+  @at-root #{&}__navigation__ul {
+    padding: 0 0 0 0;
+    list-style: none;
+  }
+  @at-root #{&}__navigation__ul__li {
+    a {
+      color: #fff;
+    }
+  }
+
+  @at-root #{&}__search__button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: $accent;
+    color: #fff;
+    border-width: 0px;
+    display: flex;
+    border-radius: 0 15px 15px 0;
+    align-items: center;
+    padding: 0 10px;
+    max-height: 50px;
+    box-sizing: border-box;
+  }
+  @at-root #{&}__search__input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-width: 0px;
+    display: flex;
+    padding: 10px 0 10px 10px;
+    border-radius: 15px 0 0 15px;
+    min-width: 200px;
+    max-height: 50px;
+    box-sizing: border-box;
+  }
+  @at-root #{&}__search__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
